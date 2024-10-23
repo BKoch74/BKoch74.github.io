@@ -6,21 +6,37 @@
         <meta name="viewport" content="width=device-width, initial scale=1.0">
         <title>Portfolio Website</title>
         <link rel="stylesheet" type="text/css" href="main.css">
+        <link rel="stylesheet" type="text/css" href="mediaqueries.css">
     </Head>
     <Body>
-        <T1>
-            <h1>Bryce Koch</h1>
-            <h2>Computer Scientist/Mathematician</h2>
-        </T1>
-        <div class="dropdown">
-            <button class="dropbtn">Options</button>
-            <div class="dropdown-content">
-                <a href="index.html">About Me</a>
-                <a href="resume.html">Resume</a>
-                <a href="projects.html">Projects</a>
-                <a href="other.html">Other</a>
+        <nav id="desktop-nav">
+            <div class="logo">Bryce Koch</div>
+            <div>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#Resume">Resume</a></li>
+                    <li><a href="#Projects">Projects</a></li>
+                    <li><a href="#Contact">Experience</a></li>
+                </ul>
             </div>
-        </div>
+        </nav>
+            
+        <nav id="hamburger-nav">
+            <div class="logo">Bryce Koch</div>
+            <div class="hamburger-menu">
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>    
+                <div class="menu-links">
+                    <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                    <li><a href="#Resume" onclick="toggleMenu()">Resume</a></li>
+                    <li><a href="#Projects" onclick="toggleMenu()">Projects</a></li>
+                    <li><a href="#Contact" onclick="toggleMenu()">Experience</a></li>
+                </div>   
+            </div>
+        </nav>
         
         <script src="app.js"></script>
         <noscript>You must enable JavaScript in order to view the full site.</noscript>
