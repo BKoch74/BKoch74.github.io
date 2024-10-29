@@ -6,56 +6,65 @@
         <meta name="viewport" content="width=device-width, initial scale=1.0">
         <title>Portfolio Website</title>
         <link rel="stylesheet" type="text/css" href="main.css">
-        <link rel="stylesheet" type="text/css" href="mediaqueries.css">
     </Head>
     <Body>
-        <nav id="desktop-nav">
-            <div class="logo">Bryce Koch</div>
-            <div>
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#Resume">Resume</a></li>
-                    <li><a href="#Projects">Projects</a></li>
-                    <li><a href="#Contact">Experience</a></li>
+        <header>
+            <a href="#" class="logo-holder">
+                <div class="logo-image">BK</div>
+                <div class="logo-text">Bryce Koch</div>
+            </a>
+            <nav>
+                <ul id="Menu">
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Resume</a>
+                    </li>
+                    <li>
+                        <a href="#">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact Me</a>
+                    </li>
                 </ul>
-            </div>
-        </nav>
-            
-        <nav id="hamburger-nav">
-            <div class="logo">Bryce Koch</div>
-            <div class="hamburger-menu">
-                <div class="hamburger-icon" onclick="toggleMenu()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>    
-                <div class="menu-links">
-                    <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                    <li><a href="#Resume" onclick="toggleMenu()">Resume</a></li>
-                    <li><a href="#Projects" onclick="toggleMenu()">Projects</a></li>
-                    <li><a href="#Contact" onclick="toggleMenu()">Experience</a></li>
-                </div>   
-            </div>
-        </nav>
-        
-        <section id="profile">
-            <div class="section__pic-container">
-                <img src="" alt="Bryce Koch Profile Picture">
-            </div>
-            <div class="section__text">
-                <p class="section__text__p1">Hello, I'm</p>
-                <h1 class="title">Bryce Koch</h1>
-                <p class="section__text__p2">Computer Scientist and Mathematician</p>
-                <div class="btn-container">
-                    <button class="btn btn-color-2" onclick="window.open('./assets/Resume.pdf')">Download CV</button>
-                    <button class="btn btn-color-1" onclick="location.href='./#Contact'">Contact</button>
+                <a href="#" class="hamburger-toggle" onClick="toggleHamburgerMenu()">
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/>
+                      </svg>
+                      
+                </a>
+            </nav>
+        </header>
+        <main>
+            <section class="about">
+                <div class="photo">
+                    <img src="./assets/github.png" alt="Bryce Koch" width="100%">
                 </div>
-                <div id="socials-container">
-                    <img src="./assets/linkedin_logo.jpeg" alt="My LinkedIn Profile" class="icon" onclick="location.href='https://linkedin.com'">
+                <div class="info">
+                    <h1><small>Hello, my name is</small>
+                        Bryce Koch
+                    </h1>
+                    <p>
+                        I am a Computer Scientist and Mathematician from Vernon, Texas. I was born and raised on a small family farm 
+                        where I learned a lot about life and hardwork. I am pursuing my degrees at Midwestern State University in Wichita
+                        Falls, Texas. 
+                    </p>
+                    <div class="buttons">
+                        <a href="./assets/Resume.pdf" class="button">View Resume</a>
+                        <a href="#" class="button">Contact Me</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="#">
+                            <img src="assets/linkedin_logo.png" alt="LinkedIn" width="48">
+                        </a>
+                        <a href="#">
+                            <img src="assets/github.png" alt="GitHub" width="48">
+                        </a>
+                    </div>
                 </div>
-                
-            </div>
-        </section>
+            </section>
+        </main>
 
         <script src="app.js"></script>
         <noscript>You must enable JavaScript in order to view the full site.</noscript>
