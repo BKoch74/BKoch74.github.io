@@ -1,4 +1,4 @@
-*, *::before. *::after {
+*, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -119,43 +119,58 @@ header{
 }
 
 main {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  display:flex;
-  flex-direction: row;
   gap: 10px;
   max-width: 1440px;
   margin: auto;
   .about {
     display: flex;
+    justify-content: center;
+    @media (max-width:1024px) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
   .photo {
     display: flex;
+    flex:1;
     max-width: 600px;
-    min-width: 600px;
+    min-width: 300px;
     justify-content: center;
-    align-content: center;
   }
   .info {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap:20px;
+    justify-content: center;
+    gap:10px;
     max-width: 600px;
     color: var(--base-light);
     h1 {
       display: flex;
-      justify-content: center;
+      align-items: baseline;
+      margin: 10px;
       font-size: 35px;
+      gap: 10px;
       small {
-        font-size: 25px;
+        font-size: 30px;
+      }
+    }
+    p {
+      font-size: 25px;
+      span {
+        @media (max-width:1024px) {
+          display: none;
+        }
       }
     }
     .buttons {
-      display: inline-block;
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 10px;
       justify-content: center;
       width: 100%;
       a {
+        font-size: 25px;
         gap: 5px;
         padding: 10px;
         border-radius: 10%;
@@ -168,8 +183,17 @@ main {
     .social-links {
       display: flex;
       justify-content: center;
+      align-items: center;
       gap: 20px;
-      min-width: 30px;
+      max-width: 40px;
+      a {
+        display: flex;
+        align-items: baseline;
+        &:hover {
+          background: var(--base-mid);
+          border-radius: 10px;
+        }
+      }
     }
   }
 }
